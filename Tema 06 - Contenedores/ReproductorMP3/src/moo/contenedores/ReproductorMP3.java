@@ -18,11 +18,9 @@ public class ReproductorMP3 {
     private List<Cancion> canciones = new ArrayList<Cancion>();
     private int cancionActual = 0;
     
-    public void agregarCancion(String titulo) {
-        Cancion c = new Cancion(titulo);
+    public void agregarCancion(Cancion c) {
         c.cuandoSeAcabeNotificarA(this);
-        canciones.add(c);
-        
+        canciones.add(c);        
     }
     
     public void siguienteCancion() {

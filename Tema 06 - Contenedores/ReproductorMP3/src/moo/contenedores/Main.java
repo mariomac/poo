@@ -22,7 +22,8 @@ public class Main {
             System.out.print("Comando: ");
             comando = scanner.nextLine();
             if(comando.startsWith("añadir")) {
-                reproductor.agregarCancion(comando.split(" ")[1]);
+                String nombreFichero = comando.split(" ")[1];
+                reproductor.agregarCancion(new Cancion(nombreFichero));
             } else if(comando.startsWith("tocar")) {
                 reproductor.tocar();
             } else if(comando.startsWith("parar")) {
