@@ -30,7 +30,9 @@ public class Cancion {
         if(panel == null) {
             panel = new JFXPanel();            
         }
+        archivo=archivo.replace(" ", "%20");
         this.archivo = archivo;
+        
         media = new Media("file://"+archivo);
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setOnEndOfMedia(new Runnable() {

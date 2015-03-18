@@ -17,21 +17,29 @@ import java.util.List;
 public class ReproductorMP3 {
     private List<Cancion> canciones = new ArrayList<Cancion>();
     private int cancionActual = 0;
+    private boolean tocando = false;
     
     public void agregarCancion(Cancion c) {
+        // el método "cuandoSeAcabeNotificarA", que no se ha dado
+        // en la solución de clase, permite que cuando una canción
+        // se acaba, ésta llame al método "siguienteCancion" del
+        // reproductor, para que continue tocando las siguientes canciones
         c.cuandoSeAcabeNotificarA(this);
         canciones.add(c);        
     }
     
     public void siguienteCancion() {
+        boolean debeContinuar = tocando;
         parar();
         cancionActual = (cancionActual + 1) % canciones.size();
-        tocar();
+        if(debeContinuar) tocar();
     }
     public void tocar() {
+        tocando = true;
         canciones.get(cancionActual).tocar();      
     }    
     public void parar() {
+        tocando = false;
         canciones.get(cancionActual).parar();        
     }
     public String toString() {

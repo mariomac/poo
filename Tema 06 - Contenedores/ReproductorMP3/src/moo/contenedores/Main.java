@@ -15,15 +15,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // la clase Scanner lee líneas que se introducen por teclado (System.in)
         Scanner scanner = new Scanner(System.in);
         ReproductorMP3 reproductor = new ReproductorMP3();
         String comando;
         do {
             System.out.print("Comando: ");
             comando = scanner.nextLine();
-            if(comando.startsWith("añadir")) {
-                String nombreFichero = comando.split(" ")[1];
-                reproductor.agregarCancion(new Cancion(nombreFichero));
+            if(comando.startsWith("ayuda")) {
+                System.out.println("COMANDOS DISPONIBLES");
+                System.out.println("\t - añadir \"ruta del fichero MP3 a añadir, entre comillas\"");
+                System.out.println("\t - tocar");
+                System.out.println("\t - parar");
+                System.out.println("\t - siguiente");
+                System.out.println("\t - lista");
+                System.out.println("\t - salir");
+            } else if(comando.startsWith("añadir")) {                
+                String nombreDeFichero = comando.split("\"")[1];               
+                reproductor.agregarCancion(new Cancion(nombreDeFichero));
             } else if(comando.startsWith("tocar")) {
                 reproductor.tocar();
             } else if(comando.startsWith("parar")) {
@@ -33,7 +42,8 @@ public class Main {
             } else if(comando.startsWith("lista")) {
                 System.out.println(reproductor.toString());
             } else if(!comando.startsWith("salir")){
-                System.out.println("Error! Comando no reconocido");
+                System.out.println("Error! Comando no reconocido.");
+                System.out.println("(Escribe 'ayuda' para ver opciones)");
             }
         } while(!comando.startsWith("salir"));
         reproductor.parar();
