@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered agenda 2015.03.27 15-42-30-965">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="agenda" name="Agenda" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="hoy" visibility="private" type="String"/>
+        <Field name="dias" visibility="private" type="HashMap&lt;String, Dia&gt;"/>
+      </Fields>
+      <Methods>
+        <Method name="setHoy" visibility="public" returnType="void">
+          <Argument type="String" name="hoy"/>
+        </Method>
+        <Method name="añadirDia" visibility="public" returnType="void">
+          <Argument type="Dia" name="d"/>
+        </Method>
+        <Method name="mostrarHoy" visibility="public" returnType="void"/>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="agenda" name="Cita" visibility="public">
+      <Constructors>
+        <Constructor name="Cita" visibility="public">
+          <Argument type="int" name="hh"/>
+          <Argument type="int" name="mm"/>
+          <Argument type="int" name="duracionMins"/>
+          <Argument type="String" name="descripcion"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="hh" visibility="private" type="int"/>
+        <Field name="duracionMins" visibility="private" type="int"/>
+      </Fields>
+      <Methods>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="agenda" name="Dia" visibility="public">
+      <Constructors>
+        <Constructor name="Dia" visibility="public">
+          <Argument type="String" name="fecha"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="fecha" visibility="private" type="String"/>
+        <Field name="eventos" visibility="private" type="ArrayList&lt;Evento&gt;"/>
+      </Fields>
+      <Methods>
+        <Method name="añadirEvento" visibility="public" returnType="void">
+          <Argument type="Evento" name="e"/>
+        </Method>
+        <Method name="getFecha" visibility="public" returnType="String"/>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="agenda" name="Evento" visibility="public">
+      <Constructors>
+        <Constructor name="Evento" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="descripcion" visibility="private" type="String"/>
+      </Fields>
+      <Methods>
+        <Method name="toString" visibility="public" returnType="String"/>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="420.0" package="agenda" name="Main" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="eventos" source="Dia" target="Evento" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List"/>
+    <UseRelation source="Dia" target="Evento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Agenda" target="Dia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dias" source="Agenda" target="Dia" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List"/>
+    <IsRelation name="is" source="Cita" target="Evento"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
