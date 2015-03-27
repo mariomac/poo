@@ -33,9 +33,8 @@ public class Main {
         ag.añadirDia(d);
         
         d = new Dia("28/03/2015");
-        d.añadirEvento(new Evento("Cumpleaños de Ana"));
-        d.añadirEvento(new Cita(14,30,60,"Comer con Juan"));
-        d.añadirEvento(new Cita(18,30,90,"Clase de guitarra"));
+        d.añadirEvento(new Cita(13,30,10,"Llamar a Jose para preguntar cómo le ha ido"));
+        d.añadirEvento(new Cita(19,30,90,"Salir a correr"));
         ag.añadirDia(d);
 
         d = new Dia("29/03/2015");
