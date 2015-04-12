@@ -15,7 +15,7 @@ public class AgendaTelefonica {
         entradas.add(c);
     }
     
-    public void leeContactos(InputStream in) throws IOException {  
+    public void leeContactos(InputStream in) throws Exception {  
         Scanner contactos = new Scanner(in);
         String linea = contactos.nextLine();
         while(!linea.equals("FIN")) {
