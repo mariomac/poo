@@ -1,5 +1,6 @@
 
 import java.util.TreeSet;
+import moo.agenda.Evento;
 import moo.agenda.fecha.Fecha;
 import moo.agenda.fecha.FechaException;
 
@@ -15,14 +16,14 @@ import moo.agenda.fecha.FechaException;
  */
 public class Test {
     public static void main(String[] args) throws FechaException {
-        TreeSet<Fecha> cf = new TreeSet<Fecha>();
-        cf.add(new Fecha(25,5,2015,10,34));
-        cf.add(new Fecha(25,12,2015,10,34));
-        cf.add(new Fecha(29,2,2016,10,34));
-        cf.add(new Fecha(25,5,2015,9,4));
+        TreeSet<Evento> cf = new TreeSet<Evento>();
+        cf.add(Evento.fromString("25/5/1979 22:10 : Ir a casa de los papas"));
+        cf.add(Evento.fromString("25/2/1949 22:10 : jurljurjlur"));
+        cf.add(Evento.fromString("23/5/1919 21:14 : Cualquier cosa"));
+        cf.add(Evento.fromString("25/5/1979 02:01 : Nacer"));
         
-        for(Fecha f : cf) {
-            System.out.println("f = " + f);
+        for(Evento f : cf) {
+            System.out.println(f);
         }
     }
     
