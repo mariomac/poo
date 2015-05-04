@@ -30,7 +30,7 @@ public class Fecha implements Comparable<Fecha> {
         } else {
             diaMaximo = 30;
         }
-        if(dia < 0 || dia > diaMaximo) throw new FechaException("Dia incorrecto: " + dia);
+        if(dia < 1 || dia > diaMaximo) throw new FechaException("Dia incorrecto: " + dia);
         num = minuto 
             + hora * 100L 
             + dia  * 10000L
