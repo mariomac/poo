@@ -1,5 +1,7 @@
 package moo.agenda.fecha;
 
+import java.util.Formatter;
+
 public class Fecha implements Comparable<Fecha> {
     // Representa una fecha como AAAAMMDDHHMM
     private long num;
@@ -37,6 +39,9 @@ public class Fecha implements Comparable<Fecha> {
     }
     
     public int compareTo(Fecha t) {
+        // En vez de hacer una resta,
+        // lo hacemos así para evitar problemas de pérdida de precisión
+        // al operar con longs i retornar un int
         if(num < t.num) {
             return -1;
         } else if(num > t.num) {
@@ -46,8 +51,21 @@ public class Fecha implements Comparable<Fecha> {
         }
     }
     
-    public String toString() {
-        return "" + num;
+    public String toString() {        
+        long mm = num % 100;
+        long hh = num / 100 % 100;
+        long dd = num / 10000 % 100;
+        long MM = num / 1000000 % 100;
+        long aaaa = num / 100000000;
+        // La manera de construir cadenas en esta asignatura es MUY ineficiente
+        // en un programa real, deberíamos usar una clase llamada StringBuilder
+        // o el método estático String.format(....), parecido al sprintf de C
+        String s = dd + "/" + MM + "/" + aaaa + " ";
+        if(hh < 10) s += "0";
+        s += hh + ":";
+        if(mm < 10) s += "0";
+        s += mm;
+        return s;
     }
         
 }
