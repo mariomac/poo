@@ -1,11 +1,12 @@
 package moo.agenda;
 
+import java.io.Serializable;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import moo.agenda.fecha.Fecha;
 import moo.agenda.fecha.FechaException;
 
-public class Evento implements Comparable<Evento> {
+public class Evento implements Comparable<Evento>, Serializable {
     private Fecha fecha;
     private String descripcion;
     
@@ -18,24 +19,11 @@ public class Evento implements Comparable<Evento> {
         return fecha.compareTo(t.fecha);
     }
     
+    public Fecha getFecha() {
+        return fecha;
+    }
+    
     public String toString() {
         return fecha.toString() + " : " + descripcion;
     }        
-    
-    
-    /*
-        Este método es un poco complicado. Asumid que se os da hecho
-    */
-    public static Evento fromString(String str) throws FechaException {
-        Scanner scanner = new Scanner(str);       
-        scanner.useDelimiter(Pattern.compile("[\\s/:]"));
-        int dd = scanner.nextInt();
-        int MM = scanner.nextInt();
-        int aaaa = scanner.nextInt();
-        int hh = scanner.nextInt();
-        int mm = scanner.nextInt();
-        scanner.useDelimiter(" : ");
-        String descripcion = scanner.next();
-        return new Evento(new Fecha(dd,MM,aaaa,hh,mm),descripcion);
-    }
 }

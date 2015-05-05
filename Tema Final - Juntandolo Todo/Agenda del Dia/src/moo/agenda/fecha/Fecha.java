@@ -1,8 +1,9 @@
 package moo.agenda.fecha;
 
+import java.io.Serializable;
 import java.util.Formatter;
 
-public class Fecha implements Comparable<Fecha> {
+public class Fecha implements Comparable<Fecha>, Serializable {
     // Representa una fecha como AAAAMMDDHHMM
     private long num;
 
@@ -37,7 +38,7 @@ public class Fecha implements Comparable<Fecha> {
             + mes  * 1000000L
             + anyo * 100000000L;
     }
-    
+        
     public int compareTo(Fecha t) {
         // En vez de hacer una resta,
         // lo hacemos así para evitar problemas de pérdida de precisión
@@ -51,20 +52,31 @@ public class Fecha implements Comparable<Fecha> {
         }
     }
     
+    public int getDia() {
+        return (int) (num / 10000 % 100);
+    }
+    public int getMes() {
+        return (int) (num / 1000000 % 100);
+    }
+    public int getAnyo() {
+        return (int) (num / 100000000);
+    }
+    public int getMinuto() {
+        return (int) (num % 100);
+    }
+    public int getHora() {
+        return (int) (num / 100 % 100);
+    }
+    
     public String toString() {        
-        long mm = num % 100;
-        long hh = num / 100 % 100;
-        long dd = num / 10000 % 100;
-        long MM = num / 1000000 % 100;
-        long aaaa = num / 100000000;
         // La manera de construir cadenas en esta asignatura es MUY ineficiente
         // en un programa real, deberíamos usar una clase llamada StringBuilder
         // o el método estático String.format(....), parecido al sprintf de C
-        String s = dd + "/" + MM + "/" + aaaa + " ";
-        if(hh < 10) s += "0";
-        s += hh + ":";
-        if(mm < 10) s += "0";
-        s += mm;
+        String s = getDia() + "/" + getMes() + "/" + getAnyo() + " ";
+        if(getHora() < 10) s += "0";
+        s += getHora() + ":";
+        if(getMinuto() < 10) s += "0";
+        s += getMinuto();
         return s;
     }
         
