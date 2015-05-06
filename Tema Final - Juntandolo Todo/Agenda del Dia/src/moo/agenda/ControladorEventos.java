@@ -18,12 +18,12 @@ public class ControladorEventos {
         eventos.add(e);
     }
     
-    public List<Evento> eventosDelDia(int dia, int mes, int anyo) {
+    public List<Evento> eventosDelDia(Fecha dia) {
         List<Evento> eventosDia = new ArrayList<Evento>();
         for(Evento e : eventos) {
             Fecha f = e.getFecha();
-            if(f.getDia() == dia && f.getMes() == mes
-                    && f.getAnyo() == anyo) {
+            if(f.getDia() == dia.getDia() && f.getMes() == dia.getMes()
+                    && f.getAnyo() == dia.getAnyo()) {
                 eventosDia.add(e);
             }
         }

@@ -40,21 +40,25 @@ public class InterfazUsuario {
     }
     
     public void verEventos() {
-        System.out.print("Fecha (dd/mm/aaaa): ");
-        String[] trozosFecha = teclado.nextLine().split("/");
-        int dia = Integer.parseInt(trozosFecha[0]);
-        int mes = Integer.parseInt(trozosFecha[1]);
-        int anyo = Integer.parseInt(trozosFecha[2]);
-        List<Evento> eventos = controlador.eventosDelDia(dia, mes, anyo);
-        if(eventos.size() == 0) {
-            System.out.println("No hay eventos para el día " +
-                    dia + "/" + mes + "/" + anyo);
-        } else {
-            System.out.println("Los eventos programados para el día " +
-                    dia + "/" + mes + "/" + anyo);
-            for(Evento e : eventos) {
-                System.out.println("\t"+e.toString());
+        try {
+            System.out.print("Fecha (dd/mm/aaaa): ");
+            String[] trozosFecha = teclado.nextLine().split("/");
+            int dia = Integer.parseInt(trozosFecha[0]);
+            int mes = Integer.parseInt(trozosFecha[1]);
+            int anyo = Integer.parseInt(trozosFecha[2]);
+            List<Evento> eventos = controlador.eventosDelDia(new Fecha(dia,mes,anyo));
+            if(eventos.size() == 0) {
+                System.out.println("No hay eventos para el día " +
+                        dia + "/" + mes + "/" + anyo);
+            } else {
+                System.out.println("Los eventos programados para el día " +
+                        dia + "/" + mes + "/" + anyo);
+                for(Evento e : eventos) {
+                    System.out.println("\t"+e.toString());
+                }
             }
+        } catch(FechaException e) {
+            System.out.println("Error en la fecha: " + e.getMessage());
         }
     }
     
