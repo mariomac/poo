@@ -1,2 +1,2 @@
 # moo
-Ejemplos de clase de Metodologia i Programacio orientada a objectes
+Ejemplos de clase de Programación orientada a objectos, ETSETB, UPC
