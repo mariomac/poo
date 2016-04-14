@@ -4,6 +4,7 @@ import enchufes.ifaces.Clavija;
 import enchufes.ifaces.TomaCorriente;
 import enchufes.impl.CalentadorAgua;
 import enchufes.impl.Maquinilla;
+import enchufes.impl.RegletaInterruptor;
 import enchufes.impl.Televisor;
 import enchufes.impl.TomaInterruptor;
 import enchufes.impl.TomaPared;
@@ -64,6 +65,23 @@ public class Main {
         toma1.proporcionaCorriente();
         toma2.proporcionaCorriente();
         toma3.proporcionaCorriente();
+        
+        
+        /* PRUEBA 5 */
+        TomaCorriente pared = new TomaPared();
+        RegletaInterruptor regleta = new RegletaInterruptor();
+        
+        regleta.enchufar(tv);
+        regleta.enchufar(maquinilla);
+        regleta.enchufar(calentador);
+        
+        pared.enchufar(regleta);
+   
+        regleta.setActivado(false);
+        pared.proporcionaCorriente();
+        
+        regleta.setActivado(true);
+        pared.proporcionaCorriente();
 
         
     }
