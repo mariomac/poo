@@ -21,7 +21,7 @@ public class Libro extends Regalo {
             return null;
         } else {
             return new Libro(titulo, getRef(),
-                    getCantidad(), getPrecio());
+                    librosADevolver, getPrecio());
         }
     }
     
