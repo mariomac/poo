@@ -1,19 +1,14 @@
-package info.macias.poo.es.ej2;
+package info.macias.poo.es.streams;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
  *
  * @author mmacias
  */
-public class Ejemplo2 {
+public class Ej2ScannerConInputStream {
     public static void leeTexto() {
         System.out.println("*** Ejemplo 2: leyendo texto de un FileInputStream");
         try {

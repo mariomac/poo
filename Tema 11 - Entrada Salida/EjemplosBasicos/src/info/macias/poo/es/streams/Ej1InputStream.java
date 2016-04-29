@@ -1,4 +1,4 @@
-package info.macias.poo.es.ej1;
+package info.macias.poo.es.streams;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.io.InputStream;
  *
  * @author mmacias
  */
-public class Ejemplo1 {
+public class Ej1InputStream {
     public static void lecturaBasica() {
         System.out.println("*** EJEMPLO 1: InputStream básico");
         byte[] arrayEntrada = { 1, 2, 3, 4 };
