@@ -1,0 +1,23 @@
+hide circle
+
+class Fecha {
+    -dia:int
+    -mes:int
+    -año:int
+    +{static} fromString(txt:String):Fecha
+    +toString():String
+}
+
+class Hora {
+    -hh:int
+    -mm:int
+    +{static} fromString(txt:String):Hora
+    +toString():String
+}
+
+Comparable <|.. Hora
+Comparable <|.. Fecha
+Hora -> Fecha : fecha
+Hora ..> TiempoException : lanza
+Fecha ..> TiempoException : lanza
+
