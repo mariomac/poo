@@ -6,6 +6,9 @@ package poo;
  */
 public class Hash {
     /* Retorna un hash a partir de un tipo y un texto */
+    // NOTA: aunque el código de este método no sea especialmente complejo,
+    //       si no lo entiendes, tampoco pasa nada, ya que usa algunos
+    //       conceptos fuera del abasto de esta asignatura.
     public static String hashea(String txt) {
         try {
             java.security.MessageDigest md = java.security.MessageDigest
