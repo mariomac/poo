@@ -1,0 +1,26 @@
+@startuml
+
+hide circle
+skinparam classAttributeIconSize 0
+
+class Coco {
+    +ingesta(:Pacman)
+}
+
+class Pacman {
+    -poderoso:boolean
+    +matar()
+}
+
+class Fantasma {
+    -vestido:boolean
+    +mueve()
+    +colisiona()
+}
+
+Pacman <. Coco
+Fantasma "*" -up-> "1" Pacman: vigila
+
+Coco <|-- CocoDelPoder
+Coco <|-- CocoVenenoso
+@enduml
