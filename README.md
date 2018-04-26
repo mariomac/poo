@@ -6,6 +6,7 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
+* **26/4/2018**: Añadido ejemplo de Excepciones [Control de facturas](Tema%2010%20-%20Excepciones/ControlFacturas)
 * **19/4/2018**: Añadidos [Enchufes](Tema%2009%20-%20Polimorfismo/Enchufes)
  y [Programa de dibujo](Tema%2009%20-%20Polimorfismo/ProgramaDibujo)
 * **12/4/2018**: Añadido [Pacman, Cocos y SuperCocos](Tema%2007%20-%20Herencia/Pacman,%20Cocos%20y%20SuperCocos)
