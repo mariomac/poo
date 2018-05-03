@@ -6,6 +6,7 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
+* **3/5/2018**: Añadido [Control de facturas con Entrada y Salida de disco](Tema%2011%20-%20Entrada%20y%20Salida/ControlFacturas_Disco)
 * **26/4/2018**: Añadido ejemplo de Excepciones [Control de facturas](Tema%2010%20-%20Excepciones/ControlFacturas)
 * **19/4/2018**: Añadidos [Enchufes](Tema%2009%20-%20Polimorfismo/Enchufes)
  y [Programa de dibujo](Tema%2009%20-%20Polimorfismo/ProgramaDibujo)

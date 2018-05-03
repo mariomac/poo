@@ -1,0 +1,5 @@
+4444:2:Cajas de cerveza
+4444:6:Cosas
+12345:3:Gaseosas
+12345:4:Pepsis
+12345:1:Paquete de servilletas
