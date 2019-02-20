@@ -6,5 +6,5 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
-* **20 Febrero 2019**: añadido primer ejemplo: [pelotas rebotando](./Tema\ 02\ -\ Clases\ y\ Objetos\ en\ Java/PrimerEjemplo)
+* **20 Febrero 2019**: añadido primer ejemplo: [pelotas rebotando](./Tema%2002%20-%20Clases%20y%20Objetos%20en%20Java/PrimerEjemplo)
 
