@@ -3,8 +3,9 @@ package ikea;
 import java.util.Objects;
 
 public class Pieza {
+   
     private int id;
-    private double ancho, alto, profundo; // ancho, alto, profundo
+    private double ancho, alto, profundo;
     private String nombre;
     private int cantidad;
     
@@ -20,21 +21,19 @@ public class Pieza {
     }
     
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(cantidad);
-        sb.append(" x ID: ");
-        sb.append(id);
-        sb.append(". ");
-        sb.append(nombre);
-        sb.append(". Dim: ");
-        sb.append(ancho);
-        sb.append("x");
-        sb.append(alto);
-        sb.append("x");
-        sb.append(profundo);
-        return sb.toString();
+        // Aquí no es necesario un StringBuilder ya que podemos concatenarlo
+        // todo en una sola línea (al contrario que en la clase Mueble)
+        return cantidad + " x ID: " + id + ". " + nombre
+                + ". Dim: " + ancho + "x" + alto + "x" + profundo;
     }
 
+    //////////////////////////////////////////////////////////////////
+    // Los métodos a continuación ha sindo generados automáticamente por
+    // Netbeans: Source -> Insert code... -> hashCode() and equals()...
+    // No es necesario entender la lógica de implementación, pero
+    // son necesarios para el correcto y eficiente funcionamiento del
+    // contenedor HashSet<Pieza> de la clase Mueble
+    ///////////////////////////////////////////////////////////////////
     @Override
     public int hashCode() {
         int hash = 7;
