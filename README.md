@@ -6,6 +6,7 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
+* **27 Marzo 2019**: añadida solución a los ejercicios de Contenedores: [CestaCompra, PeliculasFavoritas, Multas](./Tema%2005%20-%20Contenedores/EjercicioClase)
 
 * **20 Marzo 2019**: añadido ejemplo Contenedores: [IKEA](./Tema%2005%20-%20Contenedores/Ikea)
 
