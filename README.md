@@ -6,6 +6,8 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
+* **10 Abril 2019**: ejemplos básicos de [herencia](Tema%2008%20-%20Herencia) y [polimorfismo](Tema%2009%20-%20Polimorfismo).
+
 * **27 Marzo 2019**: añadida solución a los ejercicios de Contenedores: [CestaCompra, PeliculasFavoritas, Multas](./Tema%2005%20-%20Contenedores/EjercicioClase)
 
 * **20 Marzo 2019**: añadido ejemplo Contenedores: [IKEA](./Tema%2005%20-%20Contenedores/Ikea)
