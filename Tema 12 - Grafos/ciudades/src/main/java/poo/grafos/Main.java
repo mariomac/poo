@@ -49,7 +49,7 @@ public class Main {
     printCamino(new DepthFirstRecursivo().ruta(gi, to, map));
   }
 
-  public static void printCamino(List<Ciudad> ciudades) {
+  public static void printCamino(Ruta ciudades) {
     boolean primera = true;
     for (Ciudad c : ciudades) {
       if (primera) {

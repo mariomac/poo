@@ -2,6 +2,7 @@ package poo.grafos.busca;
 
 import poo.grafos.Ciudad;
 import poo.grafos.MapaCarreteras;
+import poo.grafos.Ruta;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -10,7 +11,7 @@ import java.util.Set;
 
 public class DepthFirst implements Buscador {
   @Override
-  public List<Ciudad> ruta(Ciudad origen, Ciudad destino, MapaCarreteras mapa) {
+  public Ruta ruta(Ciudad origen, Ciudad destino, MapaCarreteras mapa) {
     // Guardando aquí una ciudad, la marcamos como visitada
     Set<Ciudad> visitadas = new HashSet<>();
 
@@ -19,9 +20,9 @@ public class DepthFirst implements Buscador {
     pilaPorVisitar.add(origen);
 
     // Vamos guardando los distintos caminos que se van recorriendo
-    List<List<Ciudad>> pilaCaminos = new ArrayList<>();
+    List<Ruta> pilaCaminos = new ArrayList<>();
     // Todo camino contendrá al menos la ciudad de origen
-    List<Ciudad> camino = new ArrayList<>();
+    Ruta camino = new Ruta();
     camino.add(origen);
     pilaCaminos.add(camino);
 
@@ -45,7 +46,7 @@ public class DepthFirst implements Buscador {
       for (Ciudad adyacente : mapa.getConexiones().get(actual)) {
         pilaPorVisitar.add(adyacente);
         // clonamos una nueva lista, igual al camino actual, y añadimos la ciudad adyacente
-        List<Ciudad> clonCamino = new ArrayList<>(camino);
+        Ruta clonCamino = camino.clonar();
         clonCamino.add(adyacente);
         pilaCaminos.add(clonCamino);
       }
