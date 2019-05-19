@@ -1,6 +1,8 @@
 package poo.grafos;
 
 import poo.grafos.busca.BreadthFirst;
+import poo.grafos.busca.DepthFirst;
+import poo.grafos.busca.DepthFirstRecursivo;
 
 import java.util.List;
 
@@ -40,7 +42,11 @@ public class Main {
     System.out.println("Desde Girona a Toledo con BreadFirst");
     printCamino(new BreadthFirst().ruta(gi, to, map));
 
+    System.out.println("Desde Girona a Toledo con DepthFirst");
+    printCamino(new DepthFirst().ruta(gi, to, map));
 
+    System.out.println("Desde Girona a Toledo con DepthFirstRecursivo");
+    printCamino(new DepthFirstRecursivo().ruta(gi, to, map));
   }
 
   public static void printCamino(List<Ciudad> ciudades) {
