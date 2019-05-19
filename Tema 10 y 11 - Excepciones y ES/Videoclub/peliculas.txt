@@ -1,13 +1,6 @@
-#### clientes
-
-12345678F:Federico Jimenez:15.5
-33333333G:Maria Martinez:1.0
-
-#### peliculas
-
 1234:Lo que el viento se llevó:33333333G
-4321:Aterriza como puedas
 3434:Lo que más me gusta
 3456:Vamos de polis
+4321:Aterriza como puedas
 6664:Los superpolis
 7777:El Padrino

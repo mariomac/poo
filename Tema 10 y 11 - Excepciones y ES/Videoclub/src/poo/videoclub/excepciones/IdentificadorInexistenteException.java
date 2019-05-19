@@ -1,9 +1,13 @@
 package poo.videoclub.excepciones;
 
 public class IdentificadorInexistenteException extends Exception {
-  
-  public IdentificadorInexistenteException(String identificador) {
-    super("Identificador inexistente: " + identificador);
-  }
+    private String identificador;
 
+    public IdentificadorInexistenteException(String identificador) {
+        this.identificador = identificador;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
 }

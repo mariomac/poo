@@ -1,18 +1,19 @@
 package poo.videoclub;
 
-import poo.videoclub.excepciones.ComandoInexistenteException;
+import java.io.FileNotFoundException;
 
 public class Main {
-  public static void main(String[] args) {
-    InterfazUsuario iu = new InterfazUsuario();
-    iu.inicializar();
-    boolean continuar = true;
-    while(continuar) {
-      try {
-        continuar = iu.leeComando();
-      } catch (ComandoInexistenteException ex) {
-        System.out.println("Error: " + ex.getMessage());
-      }
+    public static void main(String[] args) {
+        InterfazUsuario iu = new InterfazUsuario();
+        try {
+            iu.inicializar();
+
+            iu.buclePrincipal();
+
+            iu.cerrar();
+        } catch (FileNotFoundException e) {
+            System.out.println("ERROR FATAL: no se han podido cargar o guardar los datos.");
+            System.out.println("causa: " + e.getMessage());
+        }
     }
-  }
 }

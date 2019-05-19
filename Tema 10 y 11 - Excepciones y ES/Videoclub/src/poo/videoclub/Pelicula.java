@@ -1,29 +1,60 @@
 package poo.videoclub;
 
 public class Pelicula {
-  private String id;
-  private String titulo;
-  private Cliente alquilada;
-  
-  public Pelicula(String id, String titulo) {
-    this.id = id;
-    this.titulo = titulo;
-    alquilada = null;
-  }
+    /**
+     * Identificador único de la película
+     */
+    private String id;
 
-  public String getTitulo() {
-    return titulo;
-  }
-  
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append(id).append(": ").append(titulo);
-    if (alquilada != null) {
-        sb.append(" (alquilada a ");
-        sb.append(alquilada).append(")");
+    /**
+     * Título de la película
+     */
+    private String titulo;
+
+    /**
+     * Cliente al cual está alquilada. Si es null, la película está sin alquilar.
+     */
+    private Cliente alquilada;
+
+    public Pelicula(String id, String titulo) {
+        this.id = id;
+        this.titulo = titulo;
+        alquilada = null;
     }
-    return sb.toString();
-  }
-  
-  
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Cliente getAlquilada() {
+        return alquilada;
+    }
+
+    public void setAlquilada(Cliente alquilada) {
+        this.alquilada = alquilada;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(id).append(": ").append(titulo);
+        if (alquilada != null) {
+            sb.append(" (alquilada a ");
+            sb.append(alquilada).append(")");
+        }
+        return sb.toString();
+    }
+
+
 }
