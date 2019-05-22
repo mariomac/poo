@@ -1,5 +1,7 @@
 package poo.asignaturas;
 
+import poo.asignaturas.siguientes.Siguientes;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
