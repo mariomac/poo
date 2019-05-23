@@ -1,10 +1,6 @@
 package poo.asignaturas.siguientes;
 
 import poo.asignaturas.Asignatura;
-import poo.asignaturas.siguientes.Siguientes;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /*
  * La clase Pila implementa los métodos introducir y sacar de la superclase Siguientes
@@ -16,14 +12,14 @@ import java.util.List;
  */
 public class Pila extends Siguientes {
 
-	@Override
-	public void introducir(Asignatura a) {
-		elementos.add(a);
-	}
+  @Override
+  public void introducir(Asignatura a) {
+    elementos.add(a);
+  }
 
-	@Override
-	public Asignatura sacar() {
-		return elementos.remove(elementos.size() - 1);
-	}
+  @Override
+  public Asignatura sacar() {
+    return elementos.remove(elementos.size() - 1);
+  }
 
 }
