@@ -6,6 +6,8 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
+* **23 Mayo 2019**: ejemplo de recorrido de grafos. [Requerimientos de Asignaturas](Tema%2012%20-%20Grafos/Asignaturas)
+
 * **19 Mayo 2019**: ejemplo de excepciones y entrada y salida. [El Videoclub](Tema%2010%20y%2011%20-%20Excepciones%20y%20ES/Videoclub).
 
 * **10 Abril 2019**: ejemplos básicos de [herencia](Tema%2008%20-%20Herencia) y [polimorfismo](Tema%2009%20-%20Polimorfismo).
