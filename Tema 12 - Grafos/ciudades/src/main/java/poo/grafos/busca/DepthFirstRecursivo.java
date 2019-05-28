@@ -6,14 +6,13 @@ import poo.grafos.Ruta;
 
 import java.util.*;
 
-public class DepthFirstRecursivo implements Buscador {
+public class DepthFirstRecursivo  {
   private Set<Ciudad> visitadas = new HashSet<>();
 
-  @Override
   public Ruta ruta(Ciudad origen, Ciudad destino, MapaCarreteras mapa) {
     if (origen.equals(destino)) {
       Ruta camino = new Ruta();
-      camino.add(origen);
+      camino.agrega(origen);
       return camino;
     }
 
@@ -25,7 +24,7 @@ public class DepthFirstRecursivo implements Buscador {
         // Si se ha llegado desde una adyacente al destino, es que hay un camino! Añadimos
         // la ciudad actual al inicio de dicho camino y lo retornamos
         if (subCamino != null) {
-          subCamino.addInicio(origen);
+          subCamino.agregaInicio(origen);
           return subCamino;
         }
       }

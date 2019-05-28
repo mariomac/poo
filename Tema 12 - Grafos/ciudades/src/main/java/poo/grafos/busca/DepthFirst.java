@@ -9,8 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class DepthFirst implements Buscador {
-  @Override
+public class DepthFirst {
   public Ruta ruta(Ciudad origen, Ciudad destino, MapaCarreteras mapa) {
     // Guardando aquí una ciudad, la marcamos como visitada
     Set<Ciudad> visitadas = new HashSet<>();
@@ -23,7 +22,7 @@ public class DepthFirst implements Buscador {
     List<Ruta> pilaCaminos = new ArrayList<>();
     // Todo camino contendrá al menos la ciudad de origen
     Ruta camino = new Ruta();
-    camino.add(origen);
+    camino.agrega(origen);
     pilaCaminos.add(camino);
 
     while (!pilaPorVisitar.isEmpty()) {
@@ -47,7 +46,7 @@ public class DepthFirst implements Buscador {
         pilaPorVisitar.add(adyacente);
         // clonamos una nueva lista, igual al camino actual, y añadimos la ciudad adyacente
         Ruta clonCamino = camino.clonar();
-        clonCamino.add(adyacente);
+        clonCamino.agrega(adyacente);
         pilaCaminos.add(clonCamino);
       }
 

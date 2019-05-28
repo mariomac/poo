@@ -30,7 +30,7 @@ public abstract class NodosPendientes {
   public abstract void introducir(Asignatura a);
 
   /**
-   * Extray y retorna la siguiente asignatura del grafo que tocaría visitar.
+   * Extrae y retorna la siguiente asignatura del grafo que tocaría visitar.
    */
   public abstract Asignatura sacar();
 
