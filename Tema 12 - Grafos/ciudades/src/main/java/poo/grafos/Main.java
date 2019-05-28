@@ -1,6 +1,7 @@
 package poo.grafos;
 
 import poo.grafos.busca.BuscadorIterativo;
+import poo.grafos.busca.BuscadorRecursivo;
 import poo.grafos.pendientes.Cola;
 import poo.grafos.pendientes.Pila;
 
@@ -42,9 +43,9 @@ public class Main {
 
 		System.out.println("Desde Girona a Toledo con DepthFirst");
 		printCamino(new BuscadorIterativo(map, new Pila()).ruta(gi, to));
-//
-//    System.out.println("Desde Girona a Toledo con DepthFirstRecursivo");
-//    printCamino(new DepthFirstRecursivo().ruta(gi, to, map));
+
+    System.out.println("Desde Girona a Toledo con DepthFirst Recursivo");
+    printCamino(new BuscadorRecursivo(map).ruta(gi, to));
 	}
 
 	public static void printCamino(Ruta ciudades) {
