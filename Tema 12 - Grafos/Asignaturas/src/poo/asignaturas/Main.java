@@ -1,7 +1,7 @@
 package poo.asignaturas;
 
-import poo.asignaturas.siguientes.Cola;
-import poo.asignaturas.siguientes.Pila;
+import poo.asignaturas.pendientes.Cola;
+import poo.asignaturas.pendientes.Pila;
 
 import java.util.Arrays;
 import java.util.HashSet;

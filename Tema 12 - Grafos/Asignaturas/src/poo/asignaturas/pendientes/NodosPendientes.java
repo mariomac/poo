@@ -1,4 +1,4 @@
-package poo.asignaturas.siguientes;
+package poo.asignaturas.pendientes;
 
 
 import poo.asignaturas.Asignatura;
@@ -7,13 +7,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * La clase Siguientes es utilizada en el recorrido del grafo. Permite introducir
- * y sacar los siguientes nodos que se van a recorrer.
+ * La clase NodosPendientes es utilizada en el recorrido del grafo. Permite introducir
+ * y sacar los nodos pendientes por recorrer.
  * <p>
  * Es una clase abstracta cuyas implementaciones se proveen en las clases
  * Cola y Pila.
  */
-public abstract class Siguientes {
+public abstract class NodosPendientes {
 
   protected List<Asignatura> elementos = new LinkedList<>();
 
@@ -25,7 +25,7 @@ public abstract class Siguientes {
   }
 
   /**
-   * Introduce un elemento en el contenedor de Siguientes asignaturas a visitar
+   * Introduce un elemento en el contenedor de asignaturas (nodos) pendientes por visitar
    */
   public abstract void introducir(Asignatura a);
 
