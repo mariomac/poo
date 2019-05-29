@@ -6,6 +6,10 @@ Autor: [Mario Macías](http://www.macias.info)
 
 ## Cambios recientes
 
+* **29 Mayo 2019**
+    - Ejemplo de lectura y escritura de archivos en disco: [Agenda](Tema%2010%20y%2011%20-%20Excepciones%20y%20ES/Agenda)
+    - Ejemplo de búsqueda de caminos en grafos: [Mapa de Carreteras](Tema%2012%20-%20Grafos/ciudades)
+
 * **23 Mayo 2019**: ejemplo de recorrido de grafos. [Requerimientos de Asignaturas](Tema%2012%20-%20Grafos/Asignaturas)
 
 * **19 Mayo 2019**: ejemplo de excepciones y entrada y salida. [El Videoclub](Tema%2010%20y%2011%20-%20Excepciones%20y%20ES/Videoclub).
