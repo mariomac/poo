@@ -1,6 +1,5 @@
 package poo.grafos.pendientes;
 
-
 import poo.grafos.Ruta;
 
 /*
@@ -13,14 +12,14 @@ import poo.grafos.Ruta;
  */
 public class Pila extends NodosPendientes {
 
-	@Override
-	public void agregar(Ruta a) {
-		elementos.add(a);
-	}
+  @Override
+  public void agregar(Ruta a) {
+    elementos.add(a);
+  }
 
-	@Override
-	public Ruta sacar() {
-		return elementos.remove(elementos.size() - 1);
-	}
+  @Override
+  public Ruta sacar() {
+    return elementos.remove(elementos.size() - 1);
+  }
 
 }

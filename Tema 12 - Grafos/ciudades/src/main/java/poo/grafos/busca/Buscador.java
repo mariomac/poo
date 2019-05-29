@@ -13,8 +13,9 @@ public abstract class Buscador {
   }
 
   /**
-   * Calcula la ruta desde una ciudad origen hasta el destino, según el mapa de carreteras dado.
-   * Retorna el recorrido calculado, o null si no hay ruta posible.
+   * Calcula la ruta desde una ciudad origen hasta el destino, según el mapa de
+   * carreteras dado. Retorna el recorrido calculado, o null si no hay ruta
+   * posible.
    */
   public abstract Ruta ruta(Ciudad origen, Ciudad destino);
 }

@@ -1,0 +1,10 @@
+20190529
+800:1100:Clase de POO
+1300:1430:Comer con el Jefe
+1830:1900:Merendar con mis padres
+1900:2030:Entreno
+20190530
+1100:1300:Dentista
+1600:1730:Biblioteca
+20190621
+1115:1415:Control de POO
